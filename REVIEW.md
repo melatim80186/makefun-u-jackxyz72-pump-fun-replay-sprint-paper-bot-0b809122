@@ -68,6 +68,13 @@ Honest caveats, kept in the report rather than tuned away:
   leans on one +0.10 trip. The final window is fresh data; no dev-window number proves it.
 - At 2x fees the dev-window result turns negative (-0.10). Fees are fixed by the harness,
   so this is a stress note, not a live risk.
+- `grade-local --stress 10` (10 block-surrogate rebuilds of the dev window): median -0.41,
+  p10 -1.69, p90 +0.22; 8 of 10 copies lost money; the dev score sits above 8 of 10, with
+  the kit's own warning that half or more copies lost money. The copies are a spread, not
+  a forecast — but they say plainly that the +0.21 dev score leans on this window's own
+  coins. The per-part evidence (real unseen hours: +0.06 / +0.23 / -0.25) is the better
+  guide to the fresh final window, and it is mixed: this entry is a positive-expectation
+  bet on the full-window average, not a lock.
 - Guardrails: 78–80 coins on the dev window (bar: 20), 233 on the full window; max
   drawdown 0.015–0.024 (bar: 0.50); 0 rejected orders. Deterministic: two identical runs
   give byte-identical PnL per fail key.
